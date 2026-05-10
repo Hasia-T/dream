@@ -1,23 +1,26 @@
 import {
   Ripple
-} from "./chunk-WWPSG2EI.js";
+} from "./chunk-YCUOKXX4.js";
 import {
   DomHandler
-} from "./chunk-PF5UBGED.js";
+} from "./chunk-INMWM7PM.js";
 import {
   SpinnerIcon
-} from "./chunk-7T6XFZHB.js";
+} from "./chunk-5ZNZW5ZF.js";
+import {
+  Fluid
+} from "./chunk-TN7GXVD6.js";
 import {
   Bind,
   BindModule
-} from "./chunk-P3KWX5XI.js";
+} from "./chunk-4SDDPZRY.js";
 import {
   BaseComponent,
   PARENT_INSTANCE
-} from "./chunk-LAHJMBMD.js";
+} from "./chunk-CQNPSUB7.js";
 import {
   BaseStyle
-} from "./chunk-KYABK2IY.js";
+} from "./chunk-LWBJCK5J.js";
 import {
   P,
   PrimeTemplate,
@@ -29,14 +32,14 @@ import {
   s2 as s,
   s3 as s2,
   z
-} from "./chunk-4LO5NBPZ.js";
+} from "./chunk-WEN6VFDQ.js";
 import {
   CommonModule,
   NgIf,
   NgStyle,
   NgTemplateOutlet,
   isPlatformBrowser
-} from "./chunk-3QQ5XP3T.js";
+} from "./chunk-X3SSKNRV.js";
 import {
   ChangeDetectionStrategy,
   Component,
@@ -97,7 +100,7 @@ import {
   ɵɵtemplate,
   ɵɵtext,
   ɵɵtextInterpolate
-} from "./chunk-W6O2UOO4.js";
+} from "./chunk-GT6USWAH.js";
 import {
   __spreadProps,
   __spreadValues
@@ -824,131 +827,6 @@ var BadgeModule = class _BadgeModule {
   }], null, null);
 })();
 
-// node_modules/primeng/fesm2022/primeng-fluid.mjs
-var _c0 = ["*"];
-var classes2 = {
-  root: "p-fluid"
-};
-var FluidStyle = class _FluidStyle extends BaseStyle {
-  name = "fluid";
-  classes = classes2;
-  static ɵfac = /* @__PURE__ */ (() => {
-    let ɵFluidStyle_BaseFactory;
-    return function FluidStyle_Factory(__ngFactoryType__) {
-      return (ɵFluidStyle_BaseFactory || (ɵFluidStyle_BaseFactory = ɵɵgetInheritedFactory(_FluidStyle)))(__ngFactoryType__ || _FluidStyle);
-    };
-  })();
-  static ɵprov = ɵɵdefineInjectable({
-    token: _FluidStyle,
-    factory: _FluidStyle.ɵfac
-  });
-};
-(() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(FluidStyle, [{
-    type: Injectable
-  }], null, null);
-})();
-var FluidClasses;
-(function(FluidClasses2) {
-  FluidClasses2["root"] = "p-fluid";
-})(FluidClasses || (FluidClasses = {}));
-var FLUID_INSTANCE = new InjectionToken("FLUID_INSTANCE");
-var Fluid = class _Fluid extends BaseComponent {
-  componentName = "Fluid";
-  $pcFluid = inject(FLUID_INSTANCE, {
-    optional: true,
-    skipSelf: true
-  }) ?? void 0;
-  bindDirectiveInstance = inject(Bind, {
-    self: true
-  });
-  onAfterViewChecked() {
-    this.bindDirectiveInstance.setAttrs(this.ptms(["host", "root"]));
-  }
-  _componentStyle = inject(FluidStyle);
-  static ɵfac = /* @__PURE__ */ (() => {
-    let ɵFluid_BaseFactory;
-    return function Fluid_Factory(__ngFactoryType__) {
-      return (ɵFluid_BaseFactory || (ɵFluid_BaseFactory = ɵɵgetInheritedFactory(_Fluid)))(__ngFactoryType__ || _Fluid);
-    };
-  })();
-  static ɵcmp = ɵɵdefineComponent({
-    type: _Fluid,
-    selectors: [["p-fluid"]],
-    hostVars: 2,
-    hostBindings: function Fluid_HostBindings(rf, ctx) {
-      if (rf & 2) {
-        ɵɵclassMap(ctx.cx("root"));
-      }
-    },
-    features: [ɵɵProvidersFeature([FluidStyle, {
-      provide: FLUID_INSTANCE,
-      useExisting: _Fluid
-    }, {
-      provide: PARENT_INSTANCE,
-      useExisting: _Fluid
-    }]), ɵɵHostDirectivesFeature([Bind]), ɵɵInheritDefinitionFeature],
-    ngContentSelectors: _c0,
-    decls: 1,
-    vars: 0,
-    template: function Fluid_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    dependencies: [CommonModule],
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
-(() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(Fluid, [{
-    type: Component,
-    args: [{
-      selector: "p-fluid",
-      template: ` <ng-content></ng-content> `,
-      standalone: true,
-      imports: [CommonModule],
-      changeDetection: ChangeDetectionStrategy.OnPush,
-      encapsulation: ViewEncapsulation.None,
-      providers: [FluidStyle, {
-        provide: FLUID_INSTANCE,
-        useExisting: Fluid
-      }, {
-        provide: PARENT_INSTANCE,
-        useExisting: Fluid
-      }],
-      host: {
-        "[class]": "cx('root')"
-      },
-      hostDirectives: [Bind]
-    }]
-  }], null, null);
-})();
-var FluidModule = class _FluidModule {
-  static ɵfac = function FluidModule_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || _FluidModule)();
-  };
-  static ɵmod = ɵɵdefineNgModule({
-    type: _FluidModule,
-    imports: [Fluid],
-    exports: [Fluid]
-  });
-  static ɵinj = ɵɵdefineInjector({
-    imports: [Fluid]
-  });
-};
-(() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(FluidModule, [{
-    type: NgModule,
-    args: [{
-      imports: [Fluid],
-      exports: [Fluid]
-    }]
-  }], null, null);
-})();
-
 // node_modules/@primeuix/styles/dist/button/index.mjs
 var style3 = `
     .p-button {
@@ -1603,7 +1481,7 @@ var style3 = `
 `;
 
 // node_modules/primeng/fesm2022/primeng-button.mjs
-var _c02 = ["content"];
+var _c0 = ["content"];
 var _c1 = ["loadingicon"];
 var _c2 = ["icon"];
 var _c3 = ["*"];
@@ -1738,7 +1616,7 @@ function Button_p_badge_6_Template(rf, ctx) {
     ɵɵproperty("value", ctx_r0.badge || (ctx_r0.buttonProps == null ? null : ctx_r0.buttonProps.badge))("severity", ctx_r0.badgeSeverity || (ctx_r0.buttonProps == null ? null : ctx_r0.buttonProps.badgeSeverity))("pt", ctx_r0.ptm("pcBadge"))("unstyled", ctx_r0.unstyled());
   }
 }
-var classes3 = {
+var classes2 = {
   root: ({
     instance
   }) => ["p-button p-component", {
@@ -1776,7 +1654,7 @@ var classes3 = {
 var ButtonStyle = class _ButtonStyle extends BaseStyle {
   name = "button";
   style = style3;
-  classes = classes3;
+  classes = classes2;
   static ɵfac = /* @__PURE__ */ (() => {
     let ɵButtonStyle_BaseFactory;
     return function ButtonStyle_Factory(__ngFactoryType__) {
@@ -2869,7 +2747,7 @@ var Button = class _Button extends BaseComponent {
     selectors: [["p-button"]],
     contentQueries: function Button_ContentQueries(rf, ctx, dirIndex) {
       if (rf & 1) {
-        ɵɵcontentQuery(dirIndex, _c02, 5)(dirIndex, _c1, 5)(dirIndex, _c2, 5)(dirIndex, PrimeTemplate, 4);
+        ɵɵcontentQuery(dirIndex, _c0, 5)(dirIndex, _c1, 5)(dirIndex, _c2, 5)(dirIndex, PrimeTemplate, 4);
       }
       if (rf & 2) {
         let _t;

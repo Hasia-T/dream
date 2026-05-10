@@ -23,7 +23,7 @@ export class GalleryComponent {
     images: any[];
     constructor() {
         this.images = [
-            { src: './images/firstMet.JPG', title: 'First Met', alt: 'First Met' },
+            { src: './images/firstMet.JPG', title: 'First Met', alt: 'First Met', description: 'First Met Description filler filler filler filler filler filler filler fille' },
             { src: './images/metAgain.PNG', title: 'Met Again', alt: 'Met Again' },
             { src: './images/fallingInLove.JPG', title: 'Falling in Love', alt: 'Falling in Love' },
             { src: './images/confession.PNG', title: 'Confession', alt: 'Confession' },

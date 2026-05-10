@@ -1,12 +1,12 @@
 <div class="fade-in mainContainer">
     <p class="header cursive-font">I have no fucking idea what to put here</p>
 
-    <div *ngIf="activeTab === 'main'" class="fade-in">
-        <p class="text">Starting from 01-08-2025</p>
-        <p class="countDownDays">{{countDownDays}} Days</p>
-    </div>
-
     <div class="grid">
+        <div class="col-12">
+            <button pButton type="button" class="centerButton" (click)="showMain()">
+                <span class="text" pButtonLabel>Home</span>
+            </button>
+        </div>
         <div class="col-3">
             <button pButton type="button" class="headerButton" (click)="showCharacter()">
                 <!-- <i class="pi pi-check" pButtonIcon></i> -->
@@ -35,6 +35,34 @@
 
     &nbsp;
 
+    <div *ngIf="activeTab === 'main'" class="fade-in">
+        <p class="text">Starting from 01-08-2025</p>
+        <p class="countDownDays">{{countDownDays}} Days</p>
+        &nbsp;
+        <p class="text">This is just my dream site 100% for fun.</p>
+
+        <div class="col-12">
+        <div class="card flex justify-center">
+            <div class="flex flex-col gap-2">
+                <label for="passphase" class="text">Passphase for unpublished content: (passphase can be obtained from
+                    the
+                    author)</label>
+                <input pInputText id="passphase" aria-describedby="username-help" [(ngModel)]="passphase" />
+                <small id="passphase-help" class="text">Actually if you just check the source you can see everything
+                    lol. (I
+                    don't have server mah)</small>
+            </div>
+        </div>
+        </div>
+
+        <div class="col-12">
+            <button pButton type="button" class="submitButton" (click)="submitPassphase()">
+                <!-- <i class="pi pi-check" pButtonIcon></i> -->
+                <span class="text" pButtonLabel>Submit</span>
+            </button>
+        </div>
+
+    </div>
 
     <!-- Tab 1: Character -->
     <div *ngIf="activeTab === 'character'" class="fade-in">
@@ -61,7 +89,7 @@
         <p-image src="./../images/danceChibi.PNG" width="50" class="endImage w-full" />
 
     </div>
-    <button pButton type="button" class="thanksButton" (click)="showThanks()">
+    <button pButton type="button" class="centerButton" (click)="showThanks()">
         <!-- <i class="pi pi-check" pButtonIcon></i> -->
         <span class="text" pButtonLabel>Thanks</span>
     </button>

@@ -8,6 +8,10 @@ import { AdultContentComponent } from '../adultcontent/adultcontent';
 import { ThanksComponent } from '../thanks/thanks';
 import { CommonModule } from '@angular/common';
 import { Image } from 'primeng/image';
+import { InputGroupModule } from 'primeng/inputgroup';
+import { InputTextModule } from 'primeng/inputtext';
+import { FormsModule } from '@angular/forms';
+
 
 // bootstrapApplication(App, appConfig)
 //     .catch(err => console.error(err));
@@ -16,7 +20,7 @@ import { Image } from 'primeng/image';
     templateUrl: './main.html',
     styleUrls: ['./main.scss'],
     standalone: true,
-    imports: [Button, Card, CharacterComponent, TimelineComponent, GalleryComponent, AdultContentComponent, ThanksComponent, CommonModule, Image]
+    imports: [Button, Card, CharacterComponent, TimelineComponent, GalleryComponent, AdultContentComponent, ThanksComponent, CommonModule, Image, InputGroupModule, InputTextModule, FormsModule]
     // schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 
@@ -24,14 +28,27 @@ export class Main {
     countDownDays: number;
     activeTab: Tab;
     thanks: boolean = false;
+    passphase: string;
     constructor() {
         this.countDownDays = Math.floor((Date.now() - Date.parse('2025-08-01')) / (1000 * 60 * 60 * 24));
         this.activeTab = Tab.MAIN;
+        this.passphase = '';
     }
 
     ngOnInit() {
         // this.activeTab = Tab.MAIN;
         // this.countDownDays = Math.floor((Date.now() - Date.parse('2025-08-01')) / (1000 * 60 * 60 * 24));
+    }
+
+    submitPassphase() {
+        if (this.passphase === 'whereIsP4R') {
+
+        }
+    }
+
+    showMain() {
+        this.activeTab = Tab.MAIN;
+        this.thanks = false;
     }
 
     showCharacter() {

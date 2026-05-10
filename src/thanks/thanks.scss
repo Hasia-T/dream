@@ -6,9 +6,11 @@
     color: white;
     text-size-adjust: 60%;
     text-align: center;
-    transition: all 0.4s ease;
+    // transition: all 0.4s ease;
+    display: flex;
+    justify-content: center;
     overflow-wrap: break-word;
-    hyphens: manual;
+    animation: fadeIn 0.8s ease forwards;
 }
 
 .fade-in {

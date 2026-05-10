@@ -3,10 +3,14 @@
     <div class="col-12">
         <p-card class="card-img-overlay">
             <ng-template #header> </ng-template>
-            <ng-template #title> {{ image.title }} </ng-template>
+            <ng-template #title > 
+                <span class="titleText">
+                        {{ image.title }}
+                </span> </ng-template>
             <div class="card flex justify-center">
-                <p-image [src]="image.src" [alt]="image.alt" width="200" class="w-full" />
+                <p-image [src]="image.src" [alt]="image.alt" width="200" class="w-full"/>
             </div>
+            <span class="descriptionText">{{ image.description }}</span>
         </p-card>
     </div>
     }
