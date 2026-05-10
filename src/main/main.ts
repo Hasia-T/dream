@@ -29,6 +29,7 @@ export class Main {
     activeTab: Tab;
     thanks: boolean = false;
     passphase: string;
+    showUnpublishedContent: boolean = false;
     constructor() {
         this.countDownDays = Math.floor((Date.now() - Date.parse('2025-08-01')) / (1000 * 60 * 60 * 24));
         this.activeTab = Tab.MAIN;
@@ -41,8 +42,10 @@ export class Main {
     }
 
     submitPassphase() {
-        if (this.passphase === 'whereIsP4R') {
+        // console.log('After encoded: ' + btoa("whereIsP4R"));
 
+        if (this.passphase === atob('d2hlcmVJc1A0Ug==')) {
+            this.showUnpublishedContent = true;
         }
     }
 

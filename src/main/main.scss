@@ -15,8 +15,12 @@
     color: white;
     text-size-adjust: 60%;
     text-align: center;
+    justify-content: center;
+    align-items: center;
     transition: all 0.4s ease;
 }
+
+
 
 .describtionText {
     color: white;
@@ -75,6 +79,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.passphaseButton {
+    display: flex;
+    text-size-adjust: 60%;
+    // justify-content: center;
+    // align-items: center;
+    // width: 20%;
+    // background-color: rgba(255, 255, 255, 0.4);
 }
 
 .thanksButton {
