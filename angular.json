@@ -6,7 +6,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "Personal": {
+    "dream": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -65,10 +65,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "Personal:build:production"
+              "buildTarget": "dream:build:production"
             },
             "development": {
-              "buildTarget": "Personal:build:development"
+              "buildTarget": "dream:build:development"
             }
           },
           "defaultConfiguration": "development"
