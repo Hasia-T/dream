@@ -16,8 +16,8 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
-            "index": "index.html",
-            "browser": "index.ts",
+            "index": "src/index.html",
+            "browser": "src/index.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [
               {
@@ -27,13 +27,13 @@
               {
                 "glob": "**/*",
                 "input": "src/images",
-                "output": "media"
+                "output": "images"
               }
             ],
             "styles": [
               "node_modules/primeicons/primeicons.css",
               "node_modules/primeflex/primeflex.css",
-              "styles.scss"
+              "src/styles.scss"
             ]
           },
           "configurations": {

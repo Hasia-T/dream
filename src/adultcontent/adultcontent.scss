@@ -34,13 +34,13 @@
     width: 100%;
     border: 2px double white;
     border-radius: 0px;
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255,255,255,0.4);
 
 }
 
 .card-img-overlay {
     // background-color: pink;
-    background: rgba(255, 255, 255, 0.5); // or hsla(0, 0%, 100%, 0.5)
+    background: rgba(255,255,255,0.5); // or hsla(0, 0%, 100%, 0.5)
 
     // [style]="{ background: 'rgba(255,255,255,0.5);'}
     // background;
@@ -55,9 +55,9 @@
 }
 
 div.image {
-    width: 100px;
-    height: 100px;
-    background-image: url(data:image/png;base64,iVBORwA<MoreBase64SringHere>);
+  width:100px;
+  height:100px;
+  background-image:url(data:image/png;base64,iVBORwA<MoreBase64SringHere>);
 }
 
 
@@ -67,7 +67,7 @@ div.image {
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
-    padding-top: 10px;
+        padding-top: 10px;
     padding-bottom: 10px;
     transition: all 0.4s ease;
 
@@ -95,16 +95,9 @@ div.image {
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(15px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
 
 
 @keyframes fadeInOpacity {

@@ -5,6 +5,11 @@ import { Message } from "primeng/message";
 import { Card } from 'primeng/card';
 import { Timeline } from 'primeng/timeline';
 import { Button } from 'primeng/button';
+import { CharacterComponent } from '../character/character';
+import { TimelineComponent } from '../timeline/timeline';
+import { GalleryComponent } from '../gallery/gallery';
+import { AdultContentComponent } from '../adultcontent/adultcontent';
+import { CommonModule } from '@angular/common';
 
 
 // bootstrapApplication(App, appConfig)
@@ -14,25 +19,45 @@ import { Button } from 'primeng/button';
     templateUrl: './main.html',
     styleUrls: ['./main.scss'],
     standalone: true,
-    imports: [Button, Card, Timeline]
+    imports: [Button, Card, CharacterComponent, TimelineComponent, GalleryComponent, AdultContentComponent, CommonModule]
     // schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 
 export class Main {
-    events: any[];
     countDownDays: number;
-    ikuyoPortraitPath: string = '../images/ikuyoPortrait.jpg';
+    activeTab: Tab;
     constructor() {
         this.countDownDays = Math.floor((Date.now() - Date.parse('2025-08-01')) / (1000 * 60 * 60 * 24));
-        this.events = [
-            { status: 'Ordered', date: '15/10/2020 10:30', icon: 'pi pi-shopping-cart', color: '#9C27B0', image: 'game-controller.jpg' },
-            { status: 'Processing', date: '15/10/2020 14:00', icon: 'pi pi-cog', color: '#673AB7' },
-            { status: 'Shipped', date: '15/10/2020 16:15', icon: 'pi pi-shopping-cart', color: '#FF9800' },
-            { status: 'Delivered', date: '16/10/2020 10:00', icon: 'pi pi-check', color: '#607D8B' }
-        ];
+        this.activeTab = Tab.MAIN;
     }
 
     ngOnInit() {
+        // this.activeTab = Tab.MAIN;
         // this.countDownDays = Math.floor((Date.now() - Date.parse('2025-08-01')) / (1000 * 60 * 60 * 24));
     }
+
+    public showCharacter() {
+        this.activeTab = Tab.CHARACTER;
+    }
+
+    showTimeline() {
+        this.activeTab = Tab.TIMELINE;
+    }
+
+    showGallery() {
+        this.activeTab = Tab.GALLERY;
+    }
+
+    showAdultContent() {
+        this.activeTab = Tab.ADULT_CONTENT;
+    }
+}
+
+
+enum Tab {
+    MAIN = 'main',
+    CHARACTER = 'character',
+    TIMELINE = 'timeline',
+    GALLERY = 'gallery',
+    ADULT_CONTENT = 'adultContent'
 }
