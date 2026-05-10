@@ -9,6 +9,7 @@ import { TimelineModule } from 'primeng/timeline';
 import { NgComponentOutlet } from '@angular/common';
 import { NgTemplateOutlet } from '@angular/common';
 import { PrimeNG } from 'primeng/config';
+
 // import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 import Aura from '@primeuix/themes/aura';

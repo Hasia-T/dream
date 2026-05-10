@@ -2,6 +2,11 @@
     animation: slide-fade 1s;
 }
 
+.mainContainer {
+        display: flex;
+    justify-content: center;
+}
+
 .cursive-font {
     font-family: cursive;
 }
@@ -19,6 +24,21 @@
     transition: all 0.4s ease;
 }
 
+.endMessage {
+    color: white;
+    text-size-adjust: 60%;
+    text-align: center;
+    transition: all 0.4s ease;
+}
+
+.endImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // margin: auto;
+    // width: 50%;
+}
+
 .countDownDays {
     color: white;
     text-size-adjust: 120%;
@@ -32,6 +52,14 @@
 
 .headerButton {
     width: 100%;
+    border: 2px double white;
+    border-radius: 0px;
+    background-color: rgba(255, 255, 255, 0.4);
+
+}
+
+.thanksButton {
+    width: 20%;
     border: 2px double white;
     border-radius: 0px;
     background-color: rgba(255, 255, 255, 0.4);

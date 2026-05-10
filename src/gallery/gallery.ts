@@ -5,7 +5,8 @@ import { Message } from "primeng/message";
 import { Card } from 'primeng/card';
 import { Timeline } from 'primeng/timeline';
 import { Button } from 'primeng/button';
-import {Galleria} from 'primeng/galleria';
+import { Image } from 'primeng/image';
+import { CommonModule } from '@angular/common';
 
 // bootstrapApplication(App, appConfig)
 //     .catch(err => console.error(err));
@@ -14,21 +15,24 @@ import {Galleria} from 'primeng/galleria';
     templateUrl: './gallery.html',
     styleUrls: ['./gallery.scss'],
     standalone: true,
-    imports: [Button, Card, Timeline, Galleria]
+    imports: [Button, Card, Image, CommonModule]
     // schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 
 export class GalleryComponent {
-    events: any[];
-    countDownDays: number;
-    ikuyoPortraitPath: string = '../images/ikuyoPortrait.jpg';
+    images: any[];
     constructor() {
-        this.countDownDays = Math.floor((Date.now() - Date.parse('2025-08-01')) / (1000 * 60 * 60 * 24));
-        this.events = [
-            { status: 'Ordered', date: '15/10/2020 10:30', icon: 'pi pi-shopping-cart', color: '#9C27B0', image: 'game-controller.jpg' },
-            { status: 'Processing', date: '15/10/2020 14:00', icon: 'pi pi-cog', color: '#673AB7' },
-            { status: 'Shipped', date: '15/10/2020 16:15', icon: 'pi pi-shopping-cart', color: '#FF9800' },
-            { status: 'Delivered', date: '16/10/2020 10:00', icon: 'pi pi-check', color: '#607D8B' }
+        this.images = [
+            { src: './images/firstMet.JPG', title: 'First Met', alt: 'First Met' },
+            { src: './images/metAgain.PNG', title: 'Met Again', alt: 'Met Again' },
+            { src: './images/fallingInLove.JPG', title: 'Falling in Love', alt: 'Falling in Love' },
+            { src: './images/confession.PNG', title: 'Confession', alt: 'Confession' },
+            { src: './images/realization.PNG', title: 'Realization', alt: 'Realization' },
+            { src: './images/together.PNG', title: 'Together', alt: 'Together' },
+            { src: './images/confession2.JPG', title: 'Confession 2', alt: 'Confession 2' },
+            { src: './images/graduation.JPG', title: 'Graduation & Proposal', alt: 'Graduation & Proposal' },
+            { src: './images/anotherProposal.JPG', title: 'Another Proposal', alt: 'Another Proposal' },
+            { src: './images/marry.JPG', title: 'Marry', alt: 'Marry' }
         ];
     }
 

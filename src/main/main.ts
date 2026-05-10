@@ -1,16 +1,13 @@
-import { bootstrapApplication } from '@angular/platform-browser';
-import { appConfig } from './../app/app.config';
 import { Component, CUSTOM_ELEMENTS_SCHEMA, OnInit } from '@angular/core';
-import { Message } from "primeng/message";
 import { Card } from 'primeng/card';
-import { Timeline } from 'primeng/timeline';
 import { Button } from 'primeng/button';
 import { CharacterComponent } from '../character/character';
 import { TimelineComponent } from '../timeline/timeline';
 import { GalleryComponent } from '../gallery/gallery';
 import { AdultContentComponent } from '../adultcontent/adultcontent';
+import { ThanksComponent } from '../thanks/thanks';
 import { CommonModule } from '@angular/common';
-
+import { Image } from 'primeng/image';
 
 // bootstrapApplication(App, appConfig)
 //     .catch(err => console.error(err));
@@ -19,13 +16,14 @@ import { CommonModule } from '@angular/common';
     templateUrl: './main.html',
     styleUrls: ['./main.scss'],
     standalone: true,
-    imports: [Button, Card, CharacterComponent, TimelineComponent, GalleryComponent, AdultContentComponent, CommonModule]
+    imports: [Button, Card, CharacterComponent, TimelineComponent, GalleryComponent, AdultContentComponent, ThanksComponent, CommonModule, Image]
     // schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 
 export class Main {
     countDownDays: number;
     activeTab: Tab;
+    thanks: boolean = false;
     constructor() {
         this.countDownDays = Math.floor((Date.now() - Date.parse('2025-08-01')) / (1000 * 60 * 60 * 24));
         this.activeTab = Tab.MAIN;
@@ -36,20 +34,28 @@ export class Main {
         // this.countDownDays = Math.floor((Date.now() - Date.parse('2025-08-01')) / (1000 * 60 * 60 * 24));
     }
 
-    public showCharacter() {
+    showCharacter() {
         this.activeTab = Tab.CHARACTER;
+        this.thanks = false;
     }
 
     showTimeline() {
         this.activeTab = Tab.TIMELINE;
+        this.thanks = false;
     }
 
     showGallery() {
         this.activeTab = Tab.GALLERY;
+        this.thanks = false;
     }
 
     showAdultContent() {
         this.activeTab = Tab.ADULT_CONTENT;
+        this.thanks = false;
+    }
+
+    showThanks() {
+        this.thanks = true;
     }
 }
 
