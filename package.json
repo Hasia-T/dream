@@ -6,6 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --base-href /dream/",
+    "build:gh": "ng build --base-href /dream/",
     "test": "ng test"
   },
   "private": true,
