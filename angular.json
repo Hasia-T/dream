@@ -34,7 +34,6 @@
               "node_modules/primeicons/primeicons.css",
               "node_modules/primeflex/primeflex.css",
               "styles.scss"
-
             ]
           },
           "configurations": {
@@ -75,6 +74,9 @@
         },
         "test": {
           "builder": "@angular/build:unit-test"
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
