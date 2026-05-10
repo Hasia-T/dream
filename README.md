@@ -1,6 +1,6 @@
-# Personal
+# KH's dream site
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.2.
+This page is KH's dream site. Every images used here is either commission by me or copyright free
 
 ## Development server
 
